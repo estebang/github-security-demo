@@ -1,0 +1,60 @@
+{
+  "version": "2",
+  "checks": {
+    "file-lines": {
+      "config": {
+        "threshold": 500
+      }
+    },
+    "similar-code": {
+      "config": {
+        "threshold": 150
+      }
+    },
+    "identical-code": {
+      "config": {
+        "threshold": 175
+      }
+    },
+    "method-complexity": {
+      "config": {
+        "threshold": 10
+      }
+    },
+    "method-lines": {
+      "config": {
+        "threshold": 32
+      }
+    },
+    "method-count": {
+      "config": {
+        "threshold": 30
+      }
+    }
+  },
+  "plugins": {
+    "tslint": {
+      "enabled": true,
+      "config": "tslint.json",
+      "checks": {
+        "prettier": {
+          "enabled": false
+        }
+      }
+    },
+    "stylelint": {
+      "enabled": true,
+      "config": ".stylelintrc",
+      "exclude_patterns": ["docs/"]
+    }
+  },
+  "exclude_patterns": [
+    "test/",
+    "bin/",
+    "scripts/",
+    "vendor/",
+    "**/*.d.ts",
+    "app/services/streamlabels/definitions.ts",
+    "**/*-api.ts"
+  ]
+}

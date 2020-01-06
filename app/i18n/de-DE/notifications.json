@@ -1,0 +1,20 @@
+{
+  "You don't have any notifications": "Sie haben keine Benachrichtigungen",
+  "Enable notifications": "Benachrichtigungen aktivieren",
+  "Enable sound": "Ton aktivieren",
+  "Skipped frames detected:": "Übersprungene Frames erkannt:",
+  "Detect skipped frames": "Übersprungene Frames erkennen",
+  "Skipped frames threshold": "Schwellenwert für übersprungene Frames",
+  "Detect lagged frames": "Verzögerte Frames erkennen",
+  "Lagged frames threshold": "Schwellenwert für verzögerte Frames",
+  "Detect dropped frames": "Ausgelassene Frames erkennen",
+  "Dropped frames threshold": "Schwellenwert für ausgelassene Frames",
+  "Show Notifications": "Benachrichtigungen anzeigen",
+  "Restore Defaults": "Standardeinstellungen wiederherstellen",
+  "Troubleshooter Notifications": "Fehlerbehebungs-Benachrichtigungen",
+  "Click to open your Notifications window": "Klicken, um das Benachrichtigungsfenster zu öffnen",
+  "Click to read your unread Notifications": "Klicken, um ungelesene Benachrichtigungen zu lesen",
+  "New Notifications": "Neue Benachrichtigungen",
+  "Log": "Protokoll",
+  "Streamlabs OBS has updated! Click here to see what changed.": "Streamlabs OBS wurde aktualisiert! Klicken Sie hier, um die Änderungen zu sehen."
+}

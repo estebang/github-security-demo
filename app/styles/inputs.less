@@ -1,0 +1,383 @@
+.input-container {
+  .margin-bottom(2);
+
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+
+  &.input-container--no-label {
+    width: 100%;
+
+    .input-label {
+      display: none;
+    }
+
+    .input-wrapper {
+      width: 100%;
+    }
+  }
+
+  &.input-container--no-margin {
+    margin-bottom: 0;
+  }
+}
+
+.input-label {
+  width: 30%;
+  .padding-right(2);
+}
+
+.input-wrapper {
+  width: 70%;
+
+  .checkbox {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .button {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.input-wrapper--search {
+  position: relative;
+
+  &::after {
+    .absolute(@top: 0, @right: 8px, @bottom: 0);
+
+    content: '\f002';
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    line-height: 32px;
+  }
+}
+
+.input-wrapper.disabled {
+  opacity: 0.5;
+
+  div,
+  input {
+    cursor: not-allowed;
+  }
+}
+
+.input--search {
+  padding: 0 30px 0 8px;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+textarea,
+textarea[type=text] {
+  .radius();
+
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--paragraph);
+  box-shadow: none;
+  height: 32px;
+  padding: 0 @spacing;
+
+  &:focus {
+    box-shadow: none;
+    background: var(--input-bg);
+    border-color: var(--focus-border);
+  }
+
+  &:disabled,
+  .is-disabled {
+    background-color: var(--button);
+    border-color: var(--button);
+  }
+
+  &.input--transparent {
+    border: 0;
+    border-bottom: 1px dashed var(--midtone);
+    padding: 0;
+    height: 20px;
+    background: transparent;
+    border-radius: 0;
+  }
+}
+
+textarea,
+textarea[type=text] {
+  .padding();
+
+  line-height: 20px;
+}
+
+.multiselect__input {
+  background: var(--dropdown-bg);
+  border-color: var(--input-border);
+}
+
+.multiselect__select {
+  z-index: 10;
+  padding: 0;
+  width: auto;
+  height: auto;
+  right: 8px;
+  top: 0;
+  line-height: 32px;
+  position: relative;
+  min-width: 220px;
+
+  &::before {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    content: '\f078';
+    border: none;
+    font-size: 9px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+  }
+}
+
+.multiselect__tags {
+  padding: 0;
+  border: none;
+  height: 0;
+  min-height: 0;
+  .radius();
+
+  input[type="text"] {
+    cursor: pointer;
+  }
+}
+
+.multiselect {
+  min-height: 32px;
+
+  .multiselect__input,
+  .multiselect__single {
+    background: var(--dropdown-bg);
+    border-color: var(--input-border);
+
+    &:hover,
+    &:focus {
+      background: var(--dropdown-bg);
+      border-color: var(--input-border);
+    }
+  }
+}
+
+.multiselect__content-wrapper {
+  position: relative;
+}
+
+.multiselect__content {
+  border-bottom-left-radius: @radius;
+  border-bottom-right-radius: @radius;
+  border: 1px solid var(--input-border);
+  border-top: none;
+  top: 30px;
+  background: var(--dropdown-bg);
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  max-height: 300px;
+  overflow-y: auto;
+  .padding-top();
+  .shadow();
+}
+
+.multiselect__element {
+  font-size: 14px;
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 100%;
+  max-width: 100%; // prevent scrollbar for the 'y' coordinate
+}
+
+.multiselect__option {
+  .transition();
+
+  padding: 4px @spacing;
+  height: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: var(--paragraph);
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &::after {
+    display: none;
+  }
+}
+
+.multiselect__option--highlight {
+  background: var(--dropdown-alt-bg);
+  color: var(--paragraph);
+
+  &::after {
+    display: none;
+  }
+}
+
+.multiselect__option--selected {
+  background: var(--dropdown-bg);
+  color: var(--title);
+
+  &.multiselect__option--highlight {
+    background: var(--dropdown-alt-bg);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.multiselect__option--disabled {
+  opacity: 0.5;
+}
+
+.multiselect--disabled {
+  opacity: 0.5;
+
+  &:focus {
+    outline: none;
+  }
+
+  .multiselect__tags {
+    .multiselect__input {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.section {
+  .multiselect__input,
+  .multiselect__content {
+    background: var(--background);
+
+    &:hover,
+    &:focus {
+      background: var(--background);
+    }
+  }
+}
+
+.colorpicker {
+  position: relative;
+  width: 220px;
+
+  @media (max-width: 1024px) {
+    width: auto;
+  }
+
+  .colorpicker__input {
+    cursor: pointer !important;
+    background: var(--dropdown-bg);
+    border-color: var(--input-border);
+
+    &:focus,
+    &:visited,
+    &:active {
+      background: var(--dropdown-bg);
+      border-color: var(--input-border);
+    }
+  }
+
+  .colorpicker__text {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .colorpicker__swatch {
+    .radius();
+
+    position: absolute;
+    top: 6px;
+    right: @spacing;
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+  }
+
+  .colorpicker-container {
+    position: relative;
+    top: -4px;
+    z-index: 10;
+    border-radius: 0 0 4px 4px;
+    background: var(--dropdown-bg);
+    border: 1px solid var(--input-border);
+    border-top: none;
+    box-shadow: 0 8px 16px var(--shadow) !important;
+    width: auto;
+  }
+
+  .colorpicker-menu {
+    width: auto;
+    max-width: 200px;
+    margin: 0 auto;
+    background: var(--dropdown-bg);
+    box-shadow: none;
+  }
+
+  // hide alpha input
+  .vc-alpha { display: none; }
+  .vc-sketch-field > div:last-child { display: none; }
+
+  .vc-sketch-presets {
+    margin-right: -8px;
+    margin-left: -8px;
+    padding-left: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .vc-sketch-field .vc-input__label {
+    color: var(--icon);
+  }
+
+  .vc-checkerboard {
+    display: none;
+  }
+}
+
+.colorpicker-slide-enter,
+.colorpicker-slide-leave-to {
+  transform: translateY(-50%) scaleY(0);
+}
+
+.colorpicker-slide-enter-to {
+  transform: translateY(0) scaleY(100%);
+}
+
+.colorpicker-slide-enter-active,
+.colorpicker-slide-leave-active {
+  transition: all 0.2s linear;
+}
+
+// Path inputs
+.path__input {
+  flex-grow: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.path__browse-button {
+  flex-shrink: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}

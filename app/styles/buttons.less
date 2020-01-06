@@ -1,0 +1,280 @@
+.button {
+  .transition();
+  .radius();
+  .weight(@medium);
+  .text-transform();
+  .padding-h-sides();
+  .padding-v-sides(@0);
+
+  border: 1px solid transparent;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 32px;
+  line-height: 30px;
+
+  &:focus,
+  &:visited {
+    outline: none;
+  }
+
+  &.is-disabled,
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  span,
+  i {
+    .margin-right();
+  }
+}
+
+.button--default {
+  background-color: var(--button);
+  color: var(--paragraph);
+
+  &:hover {
+    background-color: var(--button-hover);
+    color: var(--title);
+  }
+
+  &:focus {
+    background-color: var(--button);
+    color: var(--title);
+  }
+
+  &.is-disabled,
+  &:disabled {
+    &:hover {
+      background-color: var(--button);
+      color: var(--title);
+    }
+  }
+}
+
+.button--action {
+  background-color: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+
+  &:hover {
+    background-color: lighten(@teal, 4%);
+    color: var(--white);
+  }
+
+  &:focus {
+    background-color: var(--teal);
+  }
+
+  &.is-disabled,
+  &:disabled {
+    &:hover {
+      background-color: var(--teal);
+    }
+  }
+}
+
+.button--trans {
+  background: transparent;
+  color: var(--paragraph);
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: var(--title);
+    background: transparent;
+
+    i {
+      color: inherit;
+    }
+  }
+}
+
+.button--warn {
+  background-color: var(--warning-button-bg);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--warning-hover);
+  }
+}
+
+.circle-button {
+  .transition();
+  .weight(@bold);
+
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--button);
+  color: var(--paragraph);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  box-sizing: content-box;
+  letter-spacing: 0.2px;
+
+  &:hover {
+    background-color: var(--button-hover);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon-button {
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  .icon-hover();
+
+  &:first-child {
+    margin-left: inherit;
+  }
+}
+
+.icon-button--lg {
+  font-size: 15px;
+}
+
+.square-button {
+  .radius();
+  .transition();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+
+  .button,
+  .square-button {
+    margin-right: 10px;
+  }
+}
+
+.button-container--right {
+  justify-content: flex-end;
+
+  .button,
+  .square-button {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+.square-button--twitch,
+.button--twitch {
+  background: #6441a4;
+
+  &:hover {
+    background: lighten(#6441a4, 4%) !important;
+  }
+
+  &:focus,
+  &:active {
+    background: #6441a4;
+  }
+}
+
+.square-button--youtube,
+.button--youtube {
+  background: #d22222;
+
+  &:hover {
+    background: lighten(#d22222, 4%) !important;
+  }
+
+  &:focus,
+  &:active,
+  &:disabled {
+    background: #d22222;
+  }
+}
+
+.square-button--facebook,
+ .button--facebook {
+   background: #3b5998;
+
+   &:hover,
+   &:active {
+     background: lighten(#3b5998, 4%) !important;
+   }
+ }
+
+.square-button--twitter {
+  background: #1da1f2;
+
+  &:hover,
+  &:active {
+    background: lighten(#1da1f2, 4%) !important;
+  }
+}
+
+.button--dlive {
+  background: #ffd300;
+
+  &:hover {
+    box-shadow: 0 3px 5px 0 rgba(255,211,0,.15) !important;
+  }
+
+  &:focus,
+  &:active {
+    background: lighten(#ffd300, 4%) !important;
+  }
+}
+
+ .button--nimotv {
+   background: #343ed1;
+
+   &:hover {
+     box-shadow: 0 3px 5px 0 rgba(#343ed1, .15) !important;
+   }
+
+   &:focus,
+   &:active {
+     background: lighten(#343ed1, 4%) !important;
+   }
+ }
+
+.button--soft-warning {
+  color: var(--warning);
+  background: rgba(251, 72, 76, 0.16);
+  border-color: transparent;
+
+  &:focus {
+    color: var(--warning);
+    background: rgba(251, 72, 76, 0.16);
+  }
+
+  &:hover {
+    background: rgba(251, 72, 76, 0.2);
+    color: var(--warning);
+  }
+}
+
+.square-button--mixer,
+.button--mixer {
+  background: #0078d7;
+
+  &:hover {
+    background: lighten(#0078d7, 4%);
+  }
+}
+
+.theme-toggle {
+  &:focus {
+    outline: 0;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "You don't have any notifications": "No tiene notificaciones",
+  "Enable notifications": "Activar notificaciones",
+  "Enable sound": "Activar sonido",
+  "Skipped frames detected:": "Fotogramas omitidos detectados:",
+  "Detect skipped frames": "Detectar fotogramas omitidos",
+  "Skipped frames threshold": "Umbral de fotogramas omitidos",
+  "Detect lagged frames": "Detectar fotogramas con retraso",
+  "Lagged frames threshold": "Umbral de fotogramas con retraso",
+  "Detect dropped frames": "Detectar fotogramas perdidos",
+  "Dropped frames threshold": "Umbral de fotogramas perdidos",
+  "Show Notifications": "Mostrar notificaciones",
+  "Restore Defaults": "Restaurar valores predeterminados",
+  "Troubleshooter Notifications": "Notificaciones del solucionador de problemas",
+  "Click to open your Notifications window": "Clic para abrir la ventana Notificaciones",
+  "Click to read your unread Notifications": "Clic para leer las notificaciones no leídas",
+  "New Notifications": "Nuevas notificaciones",
+  "Log": "Registro",
+  "Streamlabs OBS has updated! Click here to see what changed.": "¡Se ha actualizado Streamlabs OBS! Haga clic aquí para ver qué ha cambiado."
+}

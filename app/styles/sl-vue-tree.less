@@ -1,0 +1,77 @@
+.sl-vue-tree-toggle {
+  .margin-right();
+
+  width: 16px !important;
+  display: inline-block;
+
+  i {
+    font-size: 7px;
+    text-align: center;
+  }
+}
+
+.sl-vue-tree.sl-vue-tree-root {
+  .radius() !important;
+
+  background-color: var(--section) !important;
+  border: 0 !important;
+  color: var(--paragraph) !important;
+}
+
+.sl-vue-tree-selected > .sl-vue-tree-node-item {
+  .weight(@medium);
+
+  background-color: var(--solid-input) !important;
+  color: var(--title) !important;
+}
+
+.sl-vue-tree-root > .sl-vue-tree-nodes-list {
+  padding-bottom: 0;
+}
+
+.sl-vue-tree-node-item {
+  .padding-h-sides(2) !important;
+  .transition();
+
+  color: var(--paragraph) !important;
+  border: 0 !important;
+  height: auto;
+  margin-top: 0;
+  cursor: pointer;
+  line-height: 32px !important;
+
+  &:hover {
+    color: var(--paragraph);
+  }
+}
+
+.sl-vue-tree-title {
+  display: flex;
+}
+
+.sl-vue-tree-cursor {
+  border: 0 !important;
+  background-color: var(--input-border);
+  z-index: 10;
+}
+
+.sl-vue-tree-node-item.sl-vue-tree-cursor-inside {
+  background-color: var(--solid-input) !important;
+}
+
+// sl-vue-tree styles within a window
+.modal-layout {
+  .sl-vue-tree.sl-vue-tree-root {
+    background-color: transparent !important;
+    border: 0;
+  }
+
+  .sl-vue-tree-node-item {
+    border: 0;
+    padding: 0 !important;
+  }
+
+  .sl-vue-tree-selected > .sl-vue-tree-node-item {
+    background-color: transparent !important;
+  }
+}

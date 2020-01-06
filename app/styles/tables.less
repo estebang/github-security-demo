@@ -1,0 +1,72 @@
+table {
+  color: var(--paragraph);
+
+  thead {
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  tbody {
+    border: none;
+    background-color: transparent;
+
+    tr {
+      &:nth-child(odd) {
+        background-color: var(--solid-input);
+        border: 0;
+      }
+
+      &:nth-child(even) {
+        background-color: transparent;
+        border: 0;
+      }
+    }
+  }
+
+  tr {
+    th,
+    td {
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  td,
+  th {
+    .padding();
+
+    .input-container {
+      width: 100%;
+      margin-bottom: 0 !important;
+      display: block;
+    }
+
+    .input-label {
+      display: none;
+    }
+
+    .input-wrapper {
+      width: 100%;
+    }
+
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  th {
+    .weight(@medium);
+
+    color: var(--midtone);
+    font-size: 12px;
+  }
+}
+
+.table__controls {
+  text-align: right;
+}

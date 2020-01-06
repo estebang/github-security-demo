@@ -1,0 +1,112 @@
+.checkbox {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  backface-visibility: hidden;
+  outline: 0;
+  vertical-align: baseline;
+  font-style: normal;
+  min-height: 16px;
+  line-height: 16px;
+  min-width: 16px;
+  .margin-bottom();
+
+  label {
+    .transition();
+    .weight(@normal);
+
+    margin: 0;
+    line-height: 16px;
+    cursor: auto;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding-left: 28px;
+    outline: 0;
+    color: var(--paragraph);
+
+    &::before {
+      .radius();
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background: transparent;
+      -webkit-transition: border 0.1s ease, opacity 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+      transition: border 0.1s ease, opacity 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+      transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+      transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+      border: 1px solid var(--input-border);
+    }
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: 0;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+
+  input:checked ~ label {
+    color: var(--title);
+
+    &::before {
+      border-color: var(--teal);
+      background-color: var(--teal);
+    }
+  }
+
+  input:checked ~ label::after {
+    position: absolute;
+    left: 3px;
+    top: 0;
+    opacity: 1;
+    color: var(--white);
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    content: '\f00c';
+    font-size: 10px;
+  }
+}
+
+.radio.checkbox {
+  label::before {
+    content: '';
+    transform: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 500rem;
+    top: 0;
+    left: 0;
+  }
+
+  input:checked ~ label::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--teal);
+    border-radius: 20px;
+    left: 4px;
+    top: 4px;
+  }
+}
+
+.slots {
+  .input-wrapper {
+    &:last-child {
+      .checkbox {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

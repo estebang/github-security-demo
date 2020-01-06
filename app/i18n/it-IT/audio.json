@@ -1,0 +1,16 @@
+{
+  "Open advanced audio settings": "Apri impostazioni avanzate audio",
+  "Volume (%)": "Volume (%)",
+  "Downmix to Mono": "Converti in mono",
+  "Sync Offset (ms)": "Sincronizza offset (ms)",
+  "Audio Monitoring": "Monitoraggio audio",
+  "Monitor Off": "Disattiva monitoraggio",
+  "Monitor Only (mute output)": "Solo monitoraggio (disattiva audio output)",
+  "Monitor and Output": "Monitoraggio e output",
+  "Tracks": "Tracce",
+  "Advanced Audio Settings": "Impostazioni audio avanzate",
+  "Volume ( % )": "Volume (%)",
+  "Sync Offset ( ms )": "Sincronizza offset (ms)",
+  "Mixer": "Mixer",
+  "Monitor audio levels. If the bars are moving you are outputting audio.": "Monitora i livelli audio. Se le barre si muovono stai trasmettendo dei suoni."
+}

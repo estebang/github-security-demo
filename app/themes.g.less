@@ -1,0 +1,88 @@
+@import "./styles/index";
+
+// Variables for use
+:root {
+  --white: #fff;
+  --black: #000;
+
+  // Brand Colors
+  --teal: @teal;
+  --teal-semi: @teal-semi;
+  --accent: @purple;
+  --blue: @blue;
+  --warning: @red;
+  --warning-hover: lighten(@red, 4%);
+  --warning-bg: rgba(251, 72, 76, 0.28);
+  --warning-button-bg: rgba(251, 72, 76, 0.36);
+  --new: @yellow;
+  --info-dark: @yellow-dark;
+  --info-light: @yellow-light;
+  --info-semi: @yellow-dark-semi;
+  --red: @red;
+  --red-semi: @red-semi;
+  --icon: @light-5;
+  --icon-semi: fade(@light-5, 15%);
+  --prime: @goldenrod;
+
+  // Theme Colors
+  --background: @light-2;
+  --section: @light-3;
+  --section-alt: @light-3;
+  --titlebar: @dark-4;
+  --title: @dark-2;
+  --paragraph: @dark-4;
+  --border: @light-4;
+  --button: @light-4;
+  --button-hover: darken(@light-4, 8%);
+  --link: @dark-5;
+  --link-active: @dark-2;
+  --input-bg: @light-1;
+  --input-border: @light-4;
+  --focus-border: darken(@light-4, 4%);
+  --solid-input: @light-2;
+  --dropdown-bg: @light-1;
+  --dropdown-alt-bg: darken(@light-1, 4%);
+  --hover: @light-4;
+  --scrollbar: @light-2;
+  --midtone: @light-5;
+  --nav-border: @dark-2;
+  --nav-icon-inactive: @dark-4;
+  --slider-bg: @light-5;
+  --slider-progress: @dark-5;
+  --shadow: rgba(55, 71, 79, 0.12);
+  --new-badge: @purple-semi;
+  --new-badge-text: @purple;
+  --modal-overlay: rgba(0, 0, 0, 0.3);
+  --prime-hover: darken(@goldenrod, 8%);
+}
+
+.night-theme {
+  --background: @dark-3;
+  --section: @dark-2;
+  --section-alt: @dark-4;
+  --titlebar: @dark-1;
+  --title: @light-1;
+  --paragraph: @light-4;
+  --border: @dark-4;
+  --button: @dark-5;
+  --button-hover: lighten(@dark-5, 8%);
+  --link: @light-4;
+  --link-active: @light-1;
+  --input-bg: transparent;
+  --input-border: @dark-5;
+  --focus-border: lighten(@dark-5, 4%);
+  --solid-input: @dark-4;
+  --dropdown-bg: @dark-4;
+  --dropdown-alt-bg: darken(@dark-4, 4%);
+  --hover: @dark-4;
+  --scrollbar: @dark-4;
+  --midtone: @dark-5;
+  --nav-border: @light-1;
+  --nav-icon-inactive: @light-5;
+  --slider-bg: @dark-4;
+  --shadow: rgba(1, 2, 2, 0.16);
+  --new-badge: @purple;
+  --new-badge-text: @light-1;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+  --prime-hover: lighten(@goldenrod, 8%);
+}
