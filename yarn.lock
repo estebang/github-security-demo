@@ -3330,9 +3330,9 @@ code-point-at@^1.0.0:
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
 codemirror@^5.32.0:
-  version "5.37.0"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.37.0.tgz#c349b584e158f590277f26d37c2469a6bc538036"
-  integrity sha512-dQaayDJCLU4UJcwg2RM44oFrs0dMNndTp6qxQJF6XI71l1xN3RB4IqiKES0b0rccbARbrD/UBB4t8DNknfaOTw==
+  version "5.61.0"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.61.0.tgz#318e5b034a707207948b92ffc2862195e8fdb08e"
+  integrity sha512-D3wYH90tYY1BsKlUe0oNj2JAhQ9TepkD51auk3N7q+4uz7A/cgJ5JsWHreT0PqieW1QhOuqxQ2reCXV1YXzecg==
 
 collapse-white-space@^1.0.2:
   version "1.0.4"
